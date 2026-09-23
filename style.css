@@ -1,0 +1,485 @@
+:root {
+  --bg: #000000;
+  --surface: #111821;
+  --text: #f5f7fa;
+  --muted: #a8b3c1;
+  --accent: #00f5ff;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+
+/* HERO */
+
+#hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.hero-intro {
+  max-width: 720px;
+  margin: 2rem 0;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-links a {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-links a:hover {
+  background: var(--accent);
+  color: var(--bg);
+
+  box-shadow:
+    0 0 8px rgba(0, 245, 255, 0.7),
+    0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+
+/* ABOUT + SKILLS */
+
+#about,
+#skills,
+#projects,
+#contact {
+  border-top: 1px solid var(--border);
+}
+
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+#about p {
+  max-width: 780px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.skills-list span {
+  padding: 0.6rem 0.9rem;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: var(--surface);
+  color: var(--text);
+}
+
+
+/* PROJECT CARDS */
+
+.project-card {
+  margin-top: 2rem;
+  padding: 2rem;
+
+  position: relative;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(0, 245, 255, 0.08);
+}
+
+.project-card h3 {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.7rem;
+}
+
+.project-card p {
+  color: var(--muted);
+}
+
+.project-label {
+  margin: 0;
+
+  color: var(--accent) !important;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* PULSE FEATURED CARD */
+
+.featured-project {
+  border-color: rgba(0, 245, 255, 0.3);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 245, 255, 0.06),
+      var(--surface) 45%
+    );
+
+  box-shadow:
+    0 0 18px rgba(0, 245, 255, 0.05);
+}
+
+.featured-project::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--accent),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+.featured-project:hover {
+  transform: translateY(-12px) scale(1.01);
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.4),
+    0 0 18px rgba(0, 245, 255, 0.22),
+    0 0 38px rgba(0, 245, 255, 0.12);
+}
+
+
+/* PULSE MOTION CARD */
+
+.motion-project {
+  border-color: rgba(0, 245, 255, 0.3);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 245, 255, 0.06),
+      var(--surface) 45%
+    );
+
+  box-shadow:
+    0 0 18px rgba(0, 245, 255, 0.05);
+}
+
+/* Normal resting top glow */
+
+.motion-project::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--accent),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+/* SVG that carries the moving border glow */
+
+.motion-border {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Hidden until the hover animation begins */
+
+.motion-border rect {
+  fill: none;
+
+  stroke: var(--accent);
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-opacity: 0;
+
+  stroke-dasharray: 25 75;
+  stroke-dashoffset: 0;
+
+  filter:
+    drop-shadow(0 0 3px rgba(0, 245, 255, 0.7))
+    drop-shadow(0 0 8px rgba(0, 245, 255, 0.35))
+    drop-shadow(0 0 14px rgba(0, 245, 255, 0.18));
+}
+
+/* Card itself still gets the stronger hover */
+
+.motion-project:hover {
+  transform: translateY(-12px) scale(1.01);
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.4),
+    0 0 16px rgba(0, 245, 255, 0.18),
+    0 0 30px rgba(0, 245, 255, 0.1);
+}
+
+/*
+  The resting top glow fades away,
+  stays gone during the lap,
+  then comes back at the end.
+*/
+
+.motion-project:hover::before {
+  animation: static-top-handoff 1.6s linear forwards;
+}
+
+/*
+  The moving SVG segment appears,
+  makes one full lap,
+  then disappears again.
+*/
+
+.motion-project:hover .motion-border rect {
+  animation: motion-border-lap 1.6s linear forwards;
+}
+
+
+/* PULSE MOTION ANIMATIONS */
+
+@keyframes static-top-handoff {
+  0%,
+  4% {
+    opacity: 1;
+  }
+
+  8%,
+  92% {
+    opacity: 0;
+  }
+
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes motion-border-lap {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 0;
+  }
+
+  6% {
+    stroke-opacity: 0.55;
+  }
+
+  94% {
+    stroke-opacity: 0.55;
+  }
+
+  100% {
+    stroke-dashoffset: -100;
+    stroke-opacity: 0;
+  }
+}
+
+
+/* CONTACT */
+
+#contact p {
+  max-width: 760px;
+
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.contact-links {
+  margin-top: 1.5rem;
+}
+
+.contact-links a {
+  display: inline-block;
+
+  padding: 0.8rem 1.2rem;
+
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-links a:hover {
+  background: var(--accent);
+  color: var(--bg);
+
+  box-shadow:
+    0 0 8px rgba(0, 245, 255, 0.7),
+    0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+
+/* FOOTER */
+
+footer {
+  width: min(1100px, 90%);
+
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+
+  color: var(--accent);
+
+  text-shadow:
+    0 0 4px rgba(0, 245, 255, 0.7),
+    0 0 10px rgba(0, 245, 255, 0.35);
+}
+
+
+/* SMALL SCREENS */
+
+@media (max-width: 700px) {
+  section {
+    padding: 4rem 0;
+  }
+
+  #hero {
+    min-height: 80vh;
+  }
+
+  .hero-intro {
+    font-size: 1.05rem;
+  }
+
+  .project-card {
+    padding: 1.4rem;
+  }
+
+  .featured-project:hover,
+  .motion-project:hover {
+    transform: translateY(-6px);
+  }
+}

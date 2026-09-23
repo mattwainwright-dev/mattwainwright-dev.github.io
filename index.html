@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="wiidth=device-width, initial-scale=1.0" />
+
+    <title>Matthew Wainwright | Web Develepor</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <section id="hero">
+        <p class="eyebrow">Web Developer</p>
+
+        <h1>Matthew Wainwright</h1>
+
+        <p class="hero-intro">
+          I build interactive web experiences with HTML, CSS, JavaScript, APIs,
+          and a strong focus on thoughtful design and user experience.
+        </p>
+
+        <div class="hero-links">
+          <a href="#projects">View My Work</a>
+          <a href="https://github.com/mattwainwright-dev" target="_blank">
+            GitHub
+          </a>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+
+        <p>
+          I am a web developer focused on building interactive, user-centered
+          experiences with HTML, CSS, JavaScript, and APIs.
+        </p>
+
+        <p>
+          I enjoy turning ideas into working products, solving problems through
+          code, and creating projects that feel intentional both technically and
+          visually.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills-list">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>REST APIs</span>
+          <span>JSON</span>
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>Postman</span>
+          <span>Cloudflare Workers</span>
+          <span>Responsive Design</span>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+
+        <article class="project-card featured-project">
+          <p class="project-label">Featured Project</p>
+
+          <h3>Pulse</h3>
+
+          <p>
+            Pulse is an API-driven music discovery prototype built with
+            JavaScript. I designed the dataset and used API requests to
+            dynamically render artist profiles, information, and audio previews,
+            demonstrating how structured data can power an interactive music
+            experience.
+          </p>
+
+          <p>
+            I added a conditional check to confirm that an artist was found
+            before rendering the profile. If no artist exists, the function logs
+            a message and exits safely.
+          </p>
+
+          <div class="project-links">
+            <a href="https://mattwainwright-dev.github.io/capstone" target="_blank">
+              Live Project
+            </a>
+
+            <a
+              href="https://github.com/mattwainwright-dev/capstone" target="_blank">
+              GitHub Repository
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card motion-project">
+            <svg
+              class="motion-border"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <rect
+                x="0.5"
+                y="0.5"
+                width="99"
+                height="99"
+                rx="2"
+                ry="2"
+                pathLength="100"
+               ></rect>
+            </svg>
+          <p class="project-label">Motion Experiment</p>
+
+          <h3>Pulse Motion Concept</h3>
+
+          <p>
+            Pulse Motion Concept explores how animation, timing, audio, and
+            visual design can work together to create a more immersive music
+            experience.
+          </p>
+
+          <p>
+            I built the concept with HTML, CSS, and JavaScript, created the beat
+            used in the project, and synchronized the animation to the music to
+            explore how rhythm, motion, and visual design can work together in
+            an interactive experience.
+          </p>
+
+          <div class="project-links">
+            <a href="https://mattwainwright-dev.github.io/pulse-motion/" target="_blank">
+              Live Project
+            </a>
+
+            <a href="https://github.com/mattwainwright-dev/pulse-motion" target="_blank">
+              GitHub Repository
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">API Tutorial</p>
+
+          <h3>Working With APIs</h3>
+
+          <p>
+            I built this beginner-friendly tutorial to demonstrate how a web
+            application can request data from an external API, convert the
+            response to JSON, and use that data on the page.
+          </p>
+
+          <p>
+            The project walks through the request-and-response process using the
+            Dog CEO API and helped strengthen my understanding of fetch,
+            async/await, JSON, response data, and debugging API requests.
+          </p>
+
+          <div class="project-links">
+            <a href="https://mattwainwright-dev.github.io/api-tutorial/" target="_blank">
+              Live Project
+            </a>
+
+            <a href="https://github.com/mattwainwright-dev/api-tutorial" target="_blank">
+              GitHub Repository
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">JavaScript Interaction</p>
+
+          <h3>Click Lab</h3>
+
+          <p>
+            Click Lab is an interactive music quiz built with HTML and
+            JavaScript. I used click events, conditional logic, and DOM updates
+            to respond to user choices and change the page as the quiz
+            progresses.
+          </p>
+
+          <p>
+            This project helped strengthen my understanding of event listeners,
+            functions, application state, and how JavaScript connects user
+            actions to visible changes in the interface.
+          </p>
+
+          <div class="project-links">
+            <a href="https://mattwainwright-dev.github.io/click-lab/" target="_blank">
+              Live Project
+            </a>
+
+            <a href="https://github.com/mattwainwright-dev/click-lab" target="_blank">
+              GitHub Repository
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">API Data Navigation</p>
+
+          <h3>Data Playlist</h3>
+
+          <p>
+            Data Playlist is an interactive chart browser powered by my own
+            deployed Cloudflare Worker API. The app fetches chart data and lets
+            users move through all 50 records with Back and Next controls.
+          </p>
+
+          <p>
+            I used JavaScript, async/await, JSON, array state, bounds checks,
+            and DOM updates to keep the chart loaded, display the current track,
+            and prevent navigation errors at either end of the dataset.
+          </p>
+
+          <div class="project-links">
+            <a href="https://mattwainwright-dev.github.io/data-playlist/" target="_blank">
+              Live Project
+            </a>
+
+            <a href="https://github.com/mattwainwright-dev/data-playlist" target="_blank">
+              GitHub Repository
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">Responsive Front-End Design</p>
+
+          <h3>Pulse Signup Page</h3>
+
+          <p>
+            I built this responsive signup experience as an early implementation
+            of the Pulse visual identity, using semantic HTML, Pico CSS, and
+            custom CSS to create a polished landing page and registration flow.
+          </p>
+
+          <p>
+            The project includes responsive layouts, interactive hover and focus
+            states, form validation styling, reusable visual components, and
+            custom Pulse branding across the hero, navigation, cards, and signup
+            form.
+          </p>
+
+          <div class="project-links">
+            <a href="https://mattwainwright-dev.github.io/signup-page/" target="_blank">
+              Live Project
+            </a>
+
+            <a href="https://github.com/mattwainwright-dev/signup-page" target="_blank">
+              GitHub Repository
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">JavaScript Fundamentals</p>
+
+          <h3>Greeting Card Generator</h3>
+
+          <p>
+            I built this interactive greeting card generator with JavaScript to
+            create personalized messages and randomly selected closings from
+            user input.
+          </p>
+
+          <p>
+            The project strengthened my understanding of arrays, Math.random(),
+            Math.floor(), string building, timers, and using JavaScript to
+            generate changing content on the page.
+          </p>
+
+          <div class="project-links">
+            <a href="https://mattwainwright-dev.github.io/greeting-card-generator/" target="_blank">
+              Live Project
+            </a>
+
+            <a href="https://github.com/mattwainwright-dev/greeting-card-generator" target="_blank">
+              GitHub Repository
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+          I am continuing to build my skills in web development and am always
+          interested in connecting with people in the industry, learning from real
+          projects, and exploring future opportunities.
+        </p>
+
+        <div class="contact-links">
+         <a href="https://github.com/mattwainwright-dev" target="_blank">
+           GitHub
+         </a>
+        </div>
+      </section>
+    </main>
+     <footer>
+      <p>Matthew Wainwright · Web Developer · 2026</p>
+     </footer>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
