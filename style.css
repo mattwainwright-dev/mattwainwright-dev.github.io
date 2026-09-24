@@ -202,6 +202,166 @@ section {
   text-decoration: underline;
 }
 
+#dataset-toggle {
+  padding: 0;
+  border: none;
+  background: none;
+
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+#dataset-toggle:hover {
+  text-decoration: underline;
+}
+
+#full-dataset-toggle {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1rem;
+
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+
+  background: transparent;
+  color: var(--accent);
+
+  font: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#full-dataset-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
+
+  box-shadow:
+    0 0 8px rgba(0, 245, 255, 0.7),
+    0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+.dataset-record-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.dataset-record-links a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    text-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+.dataset-record-links a:hover {
+  color: var(--text);
+
+  text-shadow:
+    0 0 5px rgba(0, 245, 255, 0.8),
+    0 0 12px rgba(0, 245, 255, 0.45);
+}  
+
+.dataset-audio-button {
+  padding: 0;
+  border: none;
+  background: none;
+
+  color: var(--accent);
+
+  font: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.dataset-audio-button:hover {
+  color: var(--text);
+
+  text-shadow:
+    0 0 5px rgba(0, 245, 255, 0.8),
+    0 0 12px rgba(0, 245, 255, 0.45);
+}
+
+.dataset-audio-button {
+  padding: 0;
+  border: none;
+  background: none;
+
+  color: var(--accent);
+
+  font: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.dataset-audio-button:hover {
+  color: var(--text);
+
+  text-shadow:
+    0 0 5px rgba(0, 245, 255, 0.8),
+    0 0 12px rgba(0, 245, 255, 0.45);
+}
+
+.dataset-panel {
+  margin-top: 2rem;
+  padding-top: 2rem;
+
+  border-top: 1px solid rgba(0, 245, 255, 0.25);
+}
+
+.dataset-label {
+  margin: 0;
+
+  color: var(--accent) !important;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dataset-panel h4 {
+  margin: 0.5rem 0 1rem;
+
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+.dataset-panel > p {
+  color: var(--muted);
+}
+
+.dataset-panel > a {
+  display: inline-block;
+  margin-top: 1.25rem;
+
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dataset-panel > a:hover {
+  text-decoration: underline;
+}
+
+#dataset-preview {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
 
 /* PULSE FEATURED CARD */
 
