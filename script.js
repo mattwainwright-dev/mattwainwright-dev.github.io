@@ -180,3 +180,38 @@ fullDatasetToggle.addEventListener("click", () => {
     });
   });
 });
+
+const principleEnter = document.getElementById("principle-enter");
+const philosophyCards = document.querySelector(".philosophy-cards");
+const pulsePrinciple = document.getElementById("pulse-principle");
+
+principleEnter.addEventListener("click", () => {
+  console.log("PRINCIPLE BUTTON CLICKED");
+  philosophyCards.style.display = "none";
+  pulsePrinciple.hidden = false;
+  pulsePrinciple.scrollIntoView({ behavior: "smooth" });
+});
+
+const philosophyBack = document.querySelector(".philosophy-back");
+
+philosophyBack.addEventListener("click", () => {
+  pulsePrinciple.hidden = true;
+  philosophyCards.style.display = "flex";
+  document.getElementById("philosophy").scrollIntoView({ behavior: "smooth" });
+});
+
+const deedEnter = document.getElementById("deed-enter");
+const devsDeed = document.getElementById("devs-deed");
+const deedBack = document.querySelector(".deed-back");
+
+deedEnter.addEventListener("click", () => {
+  philosophyCards.style.display = "none";
+  devsDeed.hidden = false;
+  devsDeed.scrollIntoView({ behavior: "smooth" });
+});
+
+deedBack.addEventListener("click", () => {
+  devsDeed.hidden = true;
+  philosophyCards.style.display = "flex";
+  document.getElementById("philosophy").scrollIntoView({ behavior: "smooth" });
+});
