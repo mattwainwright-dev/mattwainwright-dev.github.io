@@ -102,8 +102,9 @@ section {
 #about,
 #skills,
 #projects,
+#philosophy,
 #contact {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(0, 245, 255, 0.18);
 }
 
 #about h2,
@@ -649,6 +650,23 @@ footer p {
 
 #philosophy {
   text-align: center;
+}
+
+#philosophy > h2 {
+  position: relative;
+  display: inline-block;
+}
+
+#philosophy > h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 0.6rem auto 0;
+  background: var(--accent);
+  box-shadow:
+    0 0 6px rgba(0, 245, 255, 0.7),
+    0 0 14px rgba(0, 245, 255, 0.3);
 }
 
 .philosophy-cards {
