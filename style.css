@@ -104,7 +104,49 @@ section {
 #projects,
 #philosophy,
 #contact {
-  border-top: 1px solid rgba(0, 245, 255, 0.18);
+  position: relative;
+  border-top: none;
+}
+
+#about::before,
+#skills::before,
+#projects::before,
+#philosophy::before,
+#contact::before,
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 245, 255, 0.55),
+    transparent
+  );
+}
+
+#about::after,
+#skills::after,
+#projects::after,
+#philosophy::after,
+#contact::after,
+footer::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 10%;
+  width: 80%;
+  height: 60px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 245, 255, 0.16) 0%,
+    rgba(0, 245, 255, 0.07) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 #about h2,
@@ -161,28 +203,6 @@ section {
 .project-card:hover {
   transform: translateY(-8px);
 
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.35),
-    0 0 18px rgba(0, 245, 255, 0.08);
-}
-
-.project-card h3 {
-  margin: 0.5rem 0 1rem;
-  font-size: 1.7rem;
-}
-
-.project-card p {
-  color: var(--muted);
-}
-
-.project-label {
-  margin: 0;
-
-  color: var(--accent) !important;
-
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -231,12 +251,6 @@ section {
   color: var(--accent);
 
   font: inherit;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    background 0.3s ease,
     color 0.3s ease,
     box-shadow 0.3s ease;
 }
@@ -295,20 +309,6 @@ section {
     0 0 5px rgba(0, 245, 255, 0.8),
     0 0 12px rgba(0, 245, 255, 0.45);
 }
-
-.dataset-audio-button {
-  padding: 0;
-  border: none;
-  background: none;
-
-  color: var(--accent);
-
-  font: inherit;
-  font-weight: 700;
-
-  cursor: pointer;
-}
-
 .dataset-audio-button:hover {
   color: var(--text);
 
@@ -604,7 +604,7 @@ footer {
   margin: 0 auto;
   padding: 2rem 0 3rem;
 
-  border-top: 1px solid var(--border);
+  position: relative;
 
   color: var(--muted);
   font-size: 0.9rem;
